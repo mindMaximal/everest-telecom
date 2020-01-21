@@ -72,7 +72,7 @@
 	<section class="benefits section">
 		<div class="container">
 
-			<h2 class="benefits__title base-title">
+			<h2 class="benefits__title title-base">
 				Стабильный интернет в частном доме или на даче <span class="color-red">до 100 Мбит/с</span> по технологии ЭВЕРЕСТ-ТЕЛЕКОМ
 			</h2>
 
@@ -164,7 +164,7 @@
 	<section class="how-it-works section">
 		<div class="container">
 
-			<h2 class="how-it-works__title base-title">Скоростной интернет по технологии ЭВЕРЕСТ – ТЕЛЕКОМ</h2>
+			<h2 class="how-it-works__title title-base">Скоростной интернет по технологии ЭВЕРЕСТ – ТЕЛЕКОМ</h2>
 
 			<div class="how-it-works__text">
 				Использование безлимитного беспроводного интернета по технологии <span class="color-red">ЭВЕРЕСТ – ТЕЛЕКОМ</span> будет актуально для тех, кто постоянно или время от времени <span class="font-bold">проживает за городом</span> и кому необходим быстрый интернет для работы или учебы, для общения с родными и близкими и других задач. 
@@ -234,7 +234,7 @@
 	<section class="connection section">
 		<div class="container">
 
-			<h2 class="connection__title base-title">Комплекты подключения</h2>
+			<h2 class="connection__title title-base">Комплекты подключения</h2>
 
 			<div class="sales">
 				<div class="sales__wrapper flex flex-space-between flex-align-stretch flex-mobile-column">
@@ -317,7 +317,7 @@
 	<section class="rate section">
 		<div class="container">
 
-			<h2 class="rate__title base-title">Тарифы абонентской платы</h2>
+			<h2 class="rate__title title-base">Тарифы абонентской платы</h2>
 
 			<div class="sales">
 				<div class="sales__wrapper flex flex-space-between flex-align-stretch flex-mobile-column">
@@ -484,14 +484,14 @@
 	<section class="application-form section">
 		<div class="container application-form__img-anchor">
 
-			<h2 class="application-form__title base-title color-white">
+			<h2 class="application-form__title title-base color-white">
 				Мы подключаем интернет, где остальные не могут.
 			</h2>
 
 			<form class="form font-noto">
 				<div class="flex flex-mobile-column">
-					<input type="text" name="name" class="form__input" placeholder="Ваше имя">
-					<input type="text" name="phone" class="form__input" placeholder="Номер телефона">
+					<input type="text" name="name" required class="form__input" placeholder="Ваше имя">
+					<input type="text" name="phone" required class="form__input" placeholder="Номер телефона">
 				</div>
 				<button type="submit" class="form__button button button-red">
 					ОСТАВИТЬ ЗАЯВКУ
@@ -508,7 +508,7 @@
 	<section class="how-connect section">
 		<div class="container">
 
-			<h2 class="how-connect__title base-title">Как подключить интернет?</h2>
+			<h2 class="how-connect__title title-base">Как подключить интернет?</h2>
 
 			<div class="timeline">
 				<div class="timeline__wrapper flex flex-space-between flex-mobile-column">
@@ -559,7 +559,7 @@
 
 			<div class="about__info">
 				
-				<h2 class="about__title base-title">О компании</h2>
+				<h2 class="about__title title-base">О компании</h2>
 
 				<p class="about__text font-noto">
 					Использование безлимитного беспроводного интернета по технологии <span class="color-red">ЭВЕРЕСТ – ТЕЛЕКОМ</span> будет актуально для тех, кто постоянно или время от времени проживает за городом и кому необходим быстрый интернет для работы или учебы, для общения с родными и близкими и других задач. 
@@ -654,11 +654,11 @@
 
 					<div class="footer__form">
 
-						<h4 class="footer__title base-title color-white">Подключите быстрый интернет уже сегодня!</h4>
+						<h4 class="footer__title title-base color-white">Подключите быстрый интернет уже сегодня!</h4>
 
 						<form class="form font-noto">
 							<div>
-								<input type="text" name="phone" class="form__input" placeholder="Номер телефона">
+								<input type="text" name="phone" required class="form__input" placeholder="Номер телефона">
 							</div>
 							<button type="submit" class="form__button button button-red">
 								ПОДКЛЮЧИТЬ
@@ -696,12 +696,16 @@
 				И наши специалисты свяжутся с вами в ближайшее время
 			</div>
 
-			<form class="popup__form form">
+			<form class="popup__form form form-white">
 				<div class="form__block form__block-name flex">
-					<input type="text" name="name" class="form__input" placeholder="Ваше имя">
+					<input type="text" required name="name" class="form__input" placeholder="Ваше имя">
 				</div>
 				<div class="form__block form__block-phone flex">
-					<input type="text" name="phone" class="form__input" placeholder="Номер телефона">
+					<input type="text" required name="phone" class="form__input" placeholder="Номер телефона">
+				</div>
+				<div class="form__privacy">
+					<input type="checkbox" required class="form__checkbox form__checkbox-privacy" name="privacy" id="privacy">
+					<a href="#" class="form__link">С условиями ознакомлен и согласен</a>
 				</div>
 				<button type="submit" class="form__button button button-red">
 					Отправить

@@ -82,7 +82,6 @@ h1, h2, h3, h4, h5, p {
 	}
 	
 	&-space-between {
-		flex-direction: row;
 		justify-content: space-between;
 	}
 
@@ -115,7 +114,7 @@ h1, h2, h3, h4, h5, p {
 	}
 }
 
-.base-title {
+.title-base {
 	color: $text;
 	font-weight: 600;
 	font-size: 1.5em;
@@ -184,7 +183,7 @@ h1, h2, h3, h4, h5, p {
 	
 		&:hover,
 		&:focus {
-			border: 2px solid $btn;
+			border-color: $btn;
 			color: $btn;
 		}
 	}
@@ -793,7 +792,6 @@ object, img {
 
 	&__subtitle {
 		display: block;
-		font-weight: bold;
 		margin-bottom: 18px;
 	}
 
@@ -801,6 +799,61 @@ object, img {
 		border-bottom: 1px dashed #dee2ff;
 		padding: 13px 0;
 		max-width: 350px;
+	}
+
+	&__privacy {
+		font-size: 0.8em;
+		letter-spacing: 0.9px;
+		margin-bottom: 20px;
+
+		.form__checkbox {
+			margin-right: 5px;
+			margin-top: 3px;
+		}
+	}
+
+	&__link {
+		transition: .2s;
+
+		&:hover, 
+		&:focus {
+			color: $btn;
+		}
+	}
+
+	&__checkbox {
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			width: 14px;
+			height: 15px;
+			border: 1px solid #ffffff;
+			border-radius: 2px;
+			background-color: $bgc;
+		}
+
+		&:after {
+			content: url('../img/popup/tick.svg');
+			position: absolute;
+			opacity: 0;
+			transform: translateX(-35%) translateY(-65%);
+			left: 50%;
+			top: 50%;
+			width: 14px;
+			height: 15px;
+		}
+
+		&:checked {
+
+			&:after {
+				opacity: 1;
+			}
+		}
 	}
 
 	&__label {
@@ -871,12 +924,24 @@ object, img {
 
 	&-white {
 		
-		.form__input {
-			background-color: #F7F8FF;
-			color: $text;
+		.form {
+			
+			&__input {
+				background-color: #F7F8FF;
+				color: #AFAEAF;
+	
+				&::placeholder {
+					color: #AFAEAF;
+				}
+			}
 
-			&::placeholder {
-				color: $text;
+			&__link {
+				color: #ffffff;
+
+				&:hover, 
+				&:focus {
+					color: $btn;
+				}
 			}
 		}
 	}
@@ -1179,7 +1244,7 @@ object, img {
 		max-width: 430px;
 		border-radius: 2px;
 		background-color: $bgc;
-		background-image: url('../img/popup/background.jpg');
+		background-image: url('../img/popup/1200.jpg');
 		background-repeat: no-repeat;
 		background-position: 0 0;
 		background-size: contain;
